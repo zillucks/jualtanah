@@ -7,6 +7,27 @@
  */
 
 ?>
+<?php if(Yii::app()->user->hasFlash('success')): ?>
+    <?php
+    $this->beginWidget('zii.widgets.jui.CJuiDialog',array(
+        'options'=>array(
+            'title'=>'sukses',
+            'autoOpen'=>true,
+            'modal'=>true,
+            'position'=>'center',
+            'width'=>'auto',
+            'height'=>'auto',
+            'closeOnEscape'=>false,
+            'close'=>'js:function(){
+                $(this).dialog("close");
+                window.location="/home";
+            }'
+        ),
+    ));
+    echo Yii::app()->user->getFlash('success');
+    $this->endWidget();
+    ?>
+<?php endif; ?>
     <style>
         .required{
             color: #FF0000;
@@ -22,8 +43,21 @@
 $form=$this->beginWidget('CActiveForm', array(
         'id'=>'frm-pasangiklan',
         'enableClientValidation'=>true,
+        'enableAjaxValidation'=>true,
         'htmlOptions' => array('enctype' => 'multipart/form-data'),
-        'clientOptions'=>array('validateOnSubmit'=>true, 'validateOnChange'=>true),
+        'clientOptions'=>array(
+            'validateOnSubmit'=>true,
+            'validateOnChange'=>true,
+            'afterValidate'=>'js:function(form,data,hasError){
+                if(!hasError){
+                    alert("sukses");
+                }
+                else
+                {
+                    alert("gagal");
+                }
+            }',
+        ),
     )
 );
 ?>

@@ -93,10 +93,13 @@ class AdminController extends Controller
         $model = new Admin();
         $id_iklan = $_POST['id_iklan'];
         if($id_iklan!==''){
+            $file = Yii::app()->db->createCommand("select url from foto where id_iklan = '$id_iklan'")->queryScalar();
+//            $foto=fopen(Yii::app()->basePath.'/..'.$file,'w');
+            unlink(Yii::app()->basePath.'/..'.$file);
             $hapus=$model->hapusiklan($id_iklan);
-            if ($hapus){
-                Yii::app()->user->setFlash('success','Hapus Data Berhasil!!!');
-            }
+//            if ($hapus){
+//                Yii::app()->user->setFlash('success','Hapus Data Berhasil!!!');
+//            }
         }
     }
 

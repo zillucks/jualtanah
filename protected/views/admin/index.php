@@ -45,7 +45,7 @@ $this->breadcrumbs=array(
                     'style'=>'width:25px',
                 ));
             }else{
-                echo CHtml::image('/images/error.png','verifikasi',array(
+                echo CHtml::image('/images/minus.png','verifikasi',array(
                     'title' => 'klik untuk verifikasi',
                     'style'=>'width:25px;cursor:pointer',
                     'onclick'=>"
@@ -105,8 +105,12 @@ $this->breadcrumbs=array(
     </tr>
     <?php endforeach;?>
     <tr>
-        <td colspan="9">
-            <quote style="font: 10px Consolas italic">lek centang berarti wes verifikasi, lek minus berarti durung</quote>
+        <td colspan="9" style="padding-top: 10px">
+            <quote style="font: 10px Consolas italic;">
+                <?php echo CHtml::image('/images/minus.png','',array('style'=>'width:15px')); ?> berarti belum verifikasi, klik gambar untuk verifikasi<br>
+                <?php echo CHtml::image('/images/tbinsert.png','',array('style'=>'width:15px')); ?> berarti sudah verifikasi.
+
+            </quote>
         </td>
     </tr>
     </tbody>

@@ -1,27 +1,9 @@
 <?php
 /* @var $this HomeController */
 Yii::app()->clientScript->registerScript('js-act',"
-//    $('#btnselengkapnya[id]').click(function(){
-//        alert(this.id);
-//        window.location='/home/detail';
-//    });
+    //
 ");
 ?>
-<?php
-//if(Yii::app()->user->hasFlash('success')):
-?>
-<div>
-    <?php
-    $this->widget('bootstrap.widgets.TbAlert', array(
-        'block'=>true,
-        'fade'=>true,
-        'closeText'=>'&times;',
-        'alerts'=>array(
-            'success'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'),
-        ),
-    ));
-    ?>
-</div>
 <div class="row" style="margin: 5px 0">
     <span style="color: #00172F;font: 11px cursive;font-style: italic;font-weight: bold">Sort By : </span>
     <?php

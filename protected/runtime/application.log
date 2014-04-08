@@ -12557,3 +12557,781 @@ Stack trace:
 REQUEST_URI=/admin/index
 HTTP_REFERER=http://jualtanah/home/detail
 ---
+2014/04/08 11:05:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/04/08 11:41:38 [error] [php] include(TbHtml.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/jualtanah/protected/views/home/home.php(18): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): HomeController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): HomeController->renderFile()
+#4 /var/www/yii/framework/web/CController.php(782): HomeController->renderPartial()
+#5 /var/www/jualtanah/protected/controllers/HomeController.php(43): HomeController->render()
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): HomeController->runAction()
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): HomeController->filterAccessControl()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): HomeController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): HomeController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /var/www/jualtanah/protected/views/home/home.php (18)
+in /var/www/jualtanah/protected/controllers/HomeController.php (43)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 11:45:09 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.adminEmail" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/base/CModule.php(105): CComponent->__get('adminEmail')
+#1 /var/www/jualtanah/protected/views/home/home.php(6): CModule->__get('adminEmail')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#6 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#18 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/jualtanah/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/
+---
+2014/04/08 11:45:17 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.adminEmail" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CWebUser.php(146): CComponent->__get('adminEmail')
+#1 /var/www/jualtanah/protected/views/home/home.php(6): CWebUser->__get('adminEmail')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#6 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#18 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/jualtanah/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/
+---
+2014/04/08 11:47:39 [error] [exception.CException] exception 'CException' with message 'Property "HomeController.adminEmail" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/jualtanah/protected/views/home/home.php(6): CComponent->__get('adminEmail')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#5 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/jualtanah/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/
+---
+2014/04/08 11:48:10 [error] [exception.CException] exception 'CException' with message 'Property "CHttpRequest.adminEmail" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/jualtanah/protected/views/home/home.php(6): CComponent->__get('adminEmail')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#5 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/jualtanah/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/
+---
+2014/04/08 11:49:42 [error] [exception.CException] exception 'CException' with message 'Property "CHttpRequest.adminEmail" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/jualtanah/protected/views/home/home.php(6): CComponent->__get('adminEmail')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#5 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/jualtanah/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/
+---
+2014/04/08 11:50:16 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "adminEmail".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/jualtanah/protected/views/home/home.php(6): CComponent->__call('adminEmail', Array)
+#1 /var/www/jualtanah/protected/views/home/home.php(6): CWebApplication->adminEmail()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#6 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#18 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/jualtanah/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/
+---
+2014/04/08 11:50:26 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "powered".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/jualtanah/protected/views/home/home.php(6): CComponent->__call('powered', Array)
+#1 /var/www/jualtanah/protected/views/home/home.php(6): CWebApplication->powered()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#6 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#18 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/jualtanah/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/
+---
+2014/04/08 11:50:53 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.getEmail" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/base/CModule.php(105): CComponent->__get('getEmail')
+#1 /var/www/jualtanah/protected/views/home/home.php(6): CModule->__get('getEmail')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#6 /var/www/jualtanah/protected/controllers/HomeController.php(42): CController->render('home', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#18 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /var/www/jualtanah/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/
+---
+2014/04/08 12:09:21 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:09:21 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:11:49 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:11:49 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:12:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/04/08 12:25:53 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:25:53 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:26:01 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:26:01 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:43:59 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:43:59 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:44:00 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (106)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:44:00 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (106)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:46:41 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:46:41 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:47:22 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 12:47:22 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:02:31 [error] [exception.CException] exception 'CException' with message 'Alias "yii.widgets.zii.CJuiDialog" is invalid. Make sure it points to an existing directory or file.' in /var/www/yii/framework/YiiBase.php:347
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(146): YiiBase::import('yii.widgets.zii...', true)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(HomeController), 'yii.widgets.zii...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(189): CBaseController->createWidget('yii.widgets.zii...', Array)
+#3 /var/www/jualtanah/protected/views/home/home.php(24): CBaseController->beginWidget('yii.widgets.zii...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/jualta...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/jualta...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/jualta...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('home', Array, true)
+#8 /var/www/jualtanah/protected/controllers/HomeController.php(43): CController->render('home', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): HomeController->actionIndex()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('home')
+#20 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/jualtanah/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/home
+HTTP_REFERER=http://jualtanah/home/pasangiklan
+---
+2014/04/08 13:04:24 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:04:24 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:07:14 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:07:14 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:10:36 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:10:36 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:11:47 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:11:47 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:13:10 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:13:10 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (75)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:22:07 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:22:07 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:22:32 [error] [php] unlink(/images/upload/4f64259d-bf42-11e3-9a78-00266cdff851.jpg): No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:97)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (97)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:22:57 [error] [php] unlink(/images/upload/4f64259d-bf42-11e3-9a78-00266cdff851.jpg): No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:97)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (97)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:26:29 [error] [php] fopen(/images/upload/4f64259d-bf42-11e3-9a78-00266cdff851.jpg): failed to open stream: No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:97)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (97)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:27:03 [error] [php] fopen(/images/upload/4f64259d-bf42-11e3-9a78-00266cdff851.jpg): failed to open stream: No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:97)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (97)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:29:33 [error] [php] unlink() expects parameter 1 to be a valid path, resource given (/var/www/jualtanah/protected/controllers/AdminController.php:99)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (99)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:31:23 [error] [php] unlink() expects parameter 1 to be a valid path, resource given (/var/www/jualtanah/protected/controllers/AdminController.php:99)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (99)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:31:50 [error] [php] Trying to get property of non-object (/var/www/jualtanah/protected/controllers/AdminController.php:99)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (99)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:33:42 [error] [php] unlink(): No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:98)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (98)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:35:35 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:35:35 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:36:04 [error] [php] unlink(): No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:98)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (98)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:42:35 [error] [php] fopen(/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg): failed to open stream: No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:98)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (98)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:42:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:42:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:42:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:42:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:42:58 [error] [php] fopen(/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg): failed to open stream: No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:98)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (98)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:43:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:43:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/upload/3...')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/jualtanah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/upload/31308231-bf44-11e3-9a78-00266cdff851.jpg
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 13:44:00 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:44:00 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:44:00 [error] [php] chmod(): No such file or directory (/var/www/jualtanah/protected/controllers/HomeController.php:81)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): HomeController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): HomeController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): HomeController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): HomeController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/home/pasangiklan
+in /var/www/jualtanah/protected/controllers/HomeController.php (81)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:45:01 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:45:01 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:45:40 [error] [php] fopen(/images/upload/8295b4e3-bf45-11e3-9a78-00266cdff851.jpg): failed to open stream: No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:98)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (98)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:45:49 [error] [php] fopen(/images/upload/8295b4e3-bf45-11e3-9a78-00266cdff851.jpg): failed to open stream: No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:98)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (98)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:46:09 [error] [php] unlink(): No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:100)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (100)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:47:21 [error] [php] unlink(/images/upload/8295b4e3-bf45-11e3-9a78-00266cdff851.jpg): No such file or directory (/var/www/jualtanah/protected/controllers/AdminController.php:100)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/hapusiklan
+in /var/www/jualtanah/protected/controllers/AdminController.php (100)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:48:46 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:48:46 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:49:32 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:49:32 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:52:36 [warning] [application] Failed to set unsafe attribute "kode_propinsi" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 13:52:36 [warning] [application] Failed to set unsafe attribute "gambar" of "Iklan".
+in /var/www/jualtanah/protected/controllers/HomeController.php (74)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 14:00:40 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/var/www/yii/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /var/www/yii/framework/web/helpers/CHtml.php(158): renderAttributes()
+#1 /var/www/yii/framework/web/helpers/CHtml.php(442): tag()
+#2 /var/www/jualtanah/protected/views/admin/index.php(110): image()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require()
+#4 /var/www/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#5 /var/www/yii/framework/web/CController.php(869): AdminController->renderFile()
+#6 /var/www/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#7 /var/www/jualtanah/protected/controllers/AdminController.php(76): AdminController->render()
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionHome()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#11 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AdminController->filterAccessControl()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#17 /var/www/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#18 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /var/www/jualtanah/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/home
+in /var/www/jualtanah/protected/views/admin/index.php (110)
+in /var/www/jualtanah/protected/controllers/AdminController.php (76)
+in /var/www/jualtanah/index.php (13)
+2014/04/08 14:01:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "minus.png".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('minus.png')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('minus.png')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/minus.png')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/jualtanah/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/minus.png
+HTTP_REFERER=http://jualtanah/admin/home
+---
+2014/04/08 14:01:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "minus.png".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('minus.png')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('minus.png')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/minus.png')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/jualtanah/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/minus.png
+HTTP_REFERER=http://jualtanah/admin/home
+---

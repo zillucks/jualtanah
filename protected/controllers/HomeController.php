@@ -83,6 +83,8 @@ class HomeController extends Controller
                 $tgl = date('Y-m-d');
                 $upload->saveAs(Yii::app()->basePath.'/../images/upload/'.$imgname);
 
+                chmod(Yii::app()->basePath.'/../images/upload/'.$imgname,0755);
+
                 $insert = Yii::app()->db->createCommand("insert into iklan values (
                     '$uuid',
                     '$model->id_tipe_iklan',
@@ -102,13 +104,23 @@ class HomeController extends Controller
                 Yii::app()->db->createCommand("insert into foto values((uuid()),'$uuid','$path')")->execute();
 
                 if($insert)
-                    Yii::app()->user->setFlash('success','Insert Data Sukses! Silahkan hubungi Admin untuk Verifikasi');
-                $this->redirect('/home/index');
+                    Yii::app()->user->setFlash('success','
+                        Insert Data Sukses! Silahkan hubungi Admin untuk Verifikasi<br>
+                        Contact Detail:
+                        <br>
+                        Phone : 081335121611
+                        <br>
+                        Email : info@jualtanahdanrumah.com
+                        '
+                    );
+//                    echo "<script>alert('insert data sukses. silahkan')</script>";
+//                $this->redirect('/home');
             }
             else{
                 echo "salah";
             }
         }
+
         $this->render('iklan',array(
             'model'=>$model,
             'ddliklan'=>$ddliklan,
